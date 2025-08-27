@@ -12,3 +12,12 @@ resource "aws_instance" "Terraform-Duna" {
   }
 }
 
+resource "aws_s3_bucket" "terra_duna_bucket" {
+  bucket = "terra-duna1"
+
+  tags = {
+    Name        = "terra-duna1"
+    Environment = "Dev"
+  }
+}
+
