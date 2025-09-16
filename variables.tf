@@ -1,27 +1,32 @@
-variable "instance_name" {
-  description = "Name tag for the EC2 instance"
+variable "aws_region" {
+  description = "AWS region to deploy resources"
   type        = string
-  default     = "Terraform-Duna1"
+  default     = "us-east-1"
 }
 
-variable "ami_id" {
-  description = "AMI ID to use for the EC2 instance"
+
+variable "vpc_cidr_block" {
+  description = "CIDR BLOCK FOR VPC"
   type        = string
-  default     = "ami-0360c520857e3138f"
+  default     = "192.168.10.0/24"
+}
+
+variable "public_subnet_cidr_block" {
+  description = "CIDR BLOCK FOR VPC"
+  type        = string
+  default     = "192.168.10.0/28"
 }
 
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t2.small"
 }
 
 variable "key_name" {
-  description = "Key pair name to use for the instance"
+  description = "The name of the SSH key pair"
   type        = string
-  default     = "terra-key"
 }
-variable "bucket_prefix" {
-  description = "Prefix for the S3 bucket name"
+variable "instance_name" {
+  description = "Name tag for the EC2 instance"
   type        = string
 }
