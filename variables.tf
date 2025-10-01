@@ -5,14 +5,17 @@ variable "aws_region" {
 }
 
 
-variable "vpc_cidr_block" {
-  description = "CIDR BLOCK FOR VPC"
+variable "vpc_cidr" {
+  description = "CIDR BLOCK FOR THE MAINVPC"
   type        = string
   default     = "192.168.10.0/24"
 }
 
-variable "public_subnet_cidr_block" {
-  description = "CIDR BLOCK FOR VPC"
+
+
+
+variable "public_subnet_cidr" {
+  description = "CIDR BLOCK FOR PUBLIC SUBNET"
   type        = string
   default     = "192.168.10.0/28"
 }
